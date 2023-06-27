@@ -1,0 +1,56 @@
+.about-container{
+  padding-top: 100px;
+  max-width: 1100px;
+  margin: auto;
+  padding-inline: 10px;
+
+
+  .about-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+
+
+    .about-text{
+      display: flex;
+      flex-direction: column;
+      color: black;
+      gap: 10px;
+
+      .title{
+        font-size: 60px;
+      }
+
+      .sub-title{
+        max-width: 400px;
+      }
+    }
+
+    .profile-picture{
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .about-container{
+
+    .about-top{
+      align-items: flex-start;
+      flex-direction: row;
+
+      .profile-picture{
+        width: 50%;
+      }
+    }
+  }
+}

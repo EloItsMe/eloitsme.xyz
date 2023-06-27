@@ -23,6 +23,7 @@
     animation: navAnimation .4s ease-out .6s forwards;
 
     .nav-link{
+      cursor: pointer;
       position: relative;
       font-weight: 500;
       font-size: 14px;
