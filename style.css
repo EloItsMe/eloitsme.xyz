@@ -61,7 +61,13 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   width: 80%;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-container {
+    bottom: 20px;
+  }
+}
 .background {
+  cursor: none;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
