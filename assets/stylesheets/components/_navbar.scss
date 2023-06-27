@@ -4,6 +4,7 @@
 
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   .nav-links{
     display: flex;
@@ -16,6 +17,10 @@
 
     background-color: rgba($color: #000000, $alpha: .5);
     backdrop-filter: blur(5px);
+
+    opacity: 0;
+    transform: translateY(100%);
+    animation: navAnimation .4s ease-out .6s forwards;
 
     .nav-link{
       position: relative;
@@ -47,5 +52,11 @@
 @media screen and (min-width: 768px) {
   .nav-container{
     bottom: 20px;
+  }
+}
+@keyframes navAnimation{
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -24,6 +24,17 @@ $circle-size: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .title{
+      transform: rotateX(45deg);
+      opacity: 0;
+      animation: textAnimation .4s ease-out .4s forwards;
+    }
+    .sub-title{
+      transform: rotateX(45deg);
+      opacity: 0;
+      animation: textAnimation .4s ease-out .6s forwards;
+    }
   }
 
   .background-items{
@@ -151,6 +162,13 @@ $circle-size: 80%;
   }
   100% {
     transform: translate(-48%, -52%);
+  }
+}
+
+@keyframes textAnimation {
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
   }
 }
 
