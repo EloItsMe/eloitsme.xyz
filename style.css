@@ -61,4 +61,130 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   width: 80%;
 }
 
+.background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(40deg, #231942, #5e548e);
+}
+.background svg {
+  display: none;
+}
+.background .background-items {
+  height: 100%;
+  width: 100%;
+  filter: url("#goo") blur(30px);
+}
+.background .background-items .item1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(205, 180, 219, 0.8), rgba(205, 180, 219, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  opacity: 1;
+  transform-origin: center center;
+  animation: moveVertical 40s ease infinite;
+}
+.background .background-items .item2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(255, 200, 221, 0.8), rgba(255, 200, 221, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  opacity: 1;
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 30s reverse infinite;
+}
+.background .background-items .item3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(255, 175, 204, 0.8), rgba(255, 175, 204, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: calc(10% + 200px);
+  left: calc(10% - 500px);
+  opacity: 1;
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 50s linear infinite;
+}
+.background .background-items .item4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(189, 224, 254, 0.8), rgba(189, 224, 254, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  opacity: 0.7;
+  transform-origin: calc(50% - 200px);
+  animation: moveInCircle 50s linear infinite;
+}
+.background .background-items .item5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(162, 210, 255, 0.8), rgba(162, 210, 255, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 160%;
+  height: 160%;
+  top: 10%;
+  left: 10%;
+  opacity: 1;
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 30s ease infinite;
+}
+.background .background-items .cursor {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(217, 4, 41, 0.8), rgba(217, 4, 41, 0) 55%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  animation: moveCursor 20s linear infinite;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes moveCursor {
+  0% {
+    transform: translate(-48%, -52%);
+  }
+  50% {
+    transform: translate(-52%, -48%);
+  }
+  100% {
+    transform: translate(-48%, -52%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .background {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    margin: 10px;
+    border-radius: 15px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
