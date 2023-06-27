@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -37,23 +38,27 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
 }
-.nav-container .nav-links .nav-link a {
+.nav-container .nav-links .nav-link {
   position: relative;
   font-weight: 500;
   font-size: 14px;
   color: white;
 }
-.nav-container .nav-links .nav-link .active::after {
+.nav-container .nav-links .nav-link::after {
   content: "";
   display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin: 2px 0;
-  width: 80%;
+  width: 0%;
   height: 3px;
   border-radius: 3px;
   background-color: white;
+  transition: width 0.3s ease-out;
+}
+.nav-container .nav-links .active::after {
+  width: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */
