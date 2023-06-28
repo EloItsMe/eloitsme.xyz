@@ -3,6 +3,10 @@
   margin: auto;
   padding-inline: 10px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
 
   .about-top{
     display: flex;
@@ -35,6 +39,32 @@
       aspect-ratio: 1/1;
       object-fit: cover;
       object-position: center;
+    }
+  }
+  .links{
+    background-color: rgba($color: #000000, $alpha: .5);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 15px;
+
+    a{
+      background-color: rgba($color: #fff, $alpha: .8);
+      color: black;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+
+      svg{
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }

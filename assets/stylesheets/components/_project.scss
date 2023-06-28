@@ -22,13 +22,43 @@
       flex-direction: column;
       gap: 20px;
     }
-
-    img{
-      border-radius: 15px;
+    .project{
       width: 100%;
       height: 80vh;
-      object-fit: cover;
+      border-radius: 15px;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      cursor: pointer;
+
+      .github-link{
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background-color: white;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+      }
     }
+
+    .musicroad{
+      background-image: url("assets/images/project/musicroad-wallpaper.webp");
+    }
+    .spacebnb{
+      background-image: url("assets/images/project/spacebnb-wallpaper.webp");
+    }
+    .background-animated{
+      background-image: url("assets/images/project/background-animated-wallpaper.webp");
+    }
+    .cursor{
+      background-image: url("assets/images/project/cursor-animated-wallpaper.webp");
+    }
+
   }
 }
 
@@ -38,8 +68,32 @@
 
     .project-cards-container{
 
+      .first, .second{
+        flex-direction: row;
+      }
+      .project{
+        height: 50vh;
+      }
+
       .first{
-        // display: flex;
+        .project{
+          &:nth-child(1){
+            width: 70%;
+          }
+          &:nth-child(2){
+            width: 30%;
+          }
+        }
+      }
+      .second{
+        .project{
+          &:nth-child(1){
+            width: 30%;
+          }
+          &:nth-child(2){
+            width: 70%;
+          }
+        }
       }
     }
   }
