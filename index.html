@@ -3,7 +3,11 @@
 <head>
   <meta charset=UTF-8>
   <meta http-equiv=X-UA-Compatible content=IE=edge>
-  <meta name=viewport content=width=device-width, initial-scale=1.0>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <link rel=stylesheet href=style.css>
   <script src=application.js defer></script>
   <title>eloitsme.xyz</title>
@@ -43,7 +47,6 @@
   <main>
     <div class="project-container">
       <h2 class="title">My Projects</h2>
-
     </div>
 
     <div class="about-container">
@@ -60,7 +63,15 @@
 
         </div>
 
-        <img src="assets/images/profile picture.jpg" alt="picture of Elowan" class="profile-picture">
+        <img
+        src="assets/images/profile-picture.webp"
+        type="image/webp"
+        sizes="(max-width: 400px) 100vw, 400px"
+        alt="picture of Elowan"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="high"
+        class="profile-picture">
 
       </div>
     </div>

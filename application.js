@@ -11,6 +11,7 @@ const navbar = (target) => {
 
 //* LINKS DECLARATION
 
+const home = document.querySelector('.background');
 const homenav = document.querySelectorAll('.nav-link')[0];
 
 const project = document.querySelector('.project-container');
@@ -48,30 +49,31 @@ window.addEventListener('scroll', () => {
 
   //* HOME
   if (window.scrollY > 0
-    && window.scrollY < homenav.scrollHeight + (window.innerHeight / 2)
+    && window.scrollY < home.offsetHeight / 2
     && !homenav.classList.contains('active'))
     {
       navbar(homenav);
       navbarIndex = 0;
+      console.log("[DEBUG HOME]");
     }
 
   //* PROJECT
 
-  if (window.scrollY > project.offsetTop - (window.innerHeight / 2)
-    && window.scrollY < project.offsetTop + project.scrollHeight + (window.innerHeight / 2)
+    else if ( window.scrollY > home.offsetHeight / 2
+    && window.scrollY < project.offsetTop + project.scrollHeight / 2
     && !projectnav.classList.contains('active'))
     {
       navbar(projectnav);
       navbarIndex = 1;
+      console.log("[DEBUG PROJECT]");
     }
 
   //* ABOUT
-  if (window.scrollY > about.offsetTop - (window.innerHeight / 2)
-    && window.scrollY < about.offsetTop + about.scrollHeight + (window.innerHeight / 2)
+  else if (window.scrollY > project.offsetTop + project.scrollHeight / 2
     && !aboutnav.classList.contains('active'))
     {
       navbar(aboutnav);
       navbarIndex = 2;
+      console.log("[DEBUG ABOUT]");
     }
-
 });
