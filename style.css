@@ -19,6 +19,13 @@ body {
   position: relative;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding-block: 100px;
+  gap: 100px;
+}
+
 h1, h2, h3, h4, h5, h6, p, a, span {
   font-family: "Inter", sans-serif;
 }
@@ -234,7 +241,6 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   }
 }
 .about-container {
-  padding-top: 100px;
   max-width: 1100px;
   margin: auto;
   padding-inline: 10px;
@@ -277,14 +283,33 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   }
 }
 .project-container {
-  padding-top: 100px;
   max-width: 1100px;
+  width: 100%;
   margin: auto;
   padding-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .project-container .title {
   font-size: 60px;
   font-weight: 700;
+}
+.project-container .project-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-container .project-cards-container .first, .project-container .project-cards-container .second {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-container .project-cards-container img {
+  border-radius: 15px;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

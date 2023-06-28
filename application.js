@@ -54,7 +54,6 @@ window.addEventListener('scroll', () => {
     {
       navbar(homenav);
       navbarIndex = 0;
-      console.log("[DEBUG HOME]");
     }
 
   //* PROJECT
@@ -65,7 +64,6 @@ window.addEventListener('scroll', () => {
     {
       navbar(projectnav);
       navbarIndex = 1;
-      console.log("[DEBUG PROJECT]");
     }
 
   //* ABOUT
@@ -74,6 +72,5 @@ window.addEventListener('scroll', () => {
     {
       navbar(aboutnav);
       navbarIndex = 2;
-      console.log("[DEBUG ABOUT]");
     }
 });

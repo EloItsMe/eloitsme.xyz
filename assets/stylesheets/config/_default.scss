@@ -14,3 +14,9 @@ li, ul{
 body{
   position: relative;
 }
+main{
+  display: flex;
+  flex-direction: column;
+  padding-block: 100px;
+  gap: 100px;
+}
