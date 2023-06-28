@@ -42,7 +42,8 @@ $circle-size: 80%;
   .background-items{
     height: 100%;
     width: 100%;
-    filter: url("#goo") blur(30px);
+    filter: url("#goo") blur(10px);
+    -webkit-filter: url("#goo") blur(10px);
 
     .item1{
       position: absolute;

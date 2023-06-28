@@ -132,7 +132,8 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 .background .background-items {
   height: 100%;
   width: 100%;
-  filter: url("#goo") blur(30px);
+  filter: url("#goo") blur(10px);
+  -webkit-filter: url("#goo") blur(10px);
 }
 .background .background-items .item1 {
   position: absolute;
